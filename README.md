@@ -56,6 +56,8 @@ Then you need to create two environment variables.
 BENDERCITO_FILE="path_to_your_config_file"
 BENDERCITO_SLACK_TOKEN="your_slack_token"
 ```
+You can generate a **Slack token** from here:
+https://api.slack.com/custom-integrations/legacy-tokens
 
 ## Usage
 
