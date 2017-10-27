@@ -10,7 +10,7 @@ def main():
     arguments = _parse_arguments()
     available_status = _load_available_status()
 
-    if arguments.list:
+    if arguments.list or not arguments.status:
         print("Available status: {}".format(", ".join(sorted(available_status.keys()))))
         return
 
@@ -53,7 +53,7 @@ def _get_env_setting(setting):
         return os.environ[setting]
     except KeyError:
         error_msg = "Set the {} env variable".format(setting)
-        raise ImproperlyConfigured(error_msg)
+        raise Exception(error_msg)
 
 if __name__ == "__main__":
     main()
